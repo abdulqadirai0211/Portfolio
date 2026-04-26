@@ -22,7 +22,7 @@ resume_data = {
             "AI/ML Engineer",
             "Generative AI Engineer",
             "Data Scientist",
-            "Agenitc System Developer",
+            "Agentic System Developer",
         ],
     },
     "education": [
