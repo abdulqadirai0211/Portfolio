@@ -1,0 +1,157 @@
+.experience__timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.experience__line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--accent-primary) 20%,
+    var(--accent-secondary) 80%,
+    transparent
+  );
+  transform: translateX(-50%);
+}
+
+.experience__item {
+  position: relative;
+  width: 50%;
+  padding: 0 40px 60px;
+}
+
+.experience__item--left {
+  left: 0;
+  text-align: right;
+}
+
+.experience__item--right {
+  left: 50%;
+}
+
+.experience__dot {
+  position: absolute;
+  top: 24px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+  box-shadow: var(--accent-glow);
+  z-index: 2;
+}
+
+.experience__item--left .experience__dot {
+  right: -8px;
+}
+
+.experience__item--right .experience__dot {
+  left: -8px;
+}
+
+.experience__card {
+  padding: 28px;
+}
+
+.experience__card:hover {
+  transform: translateY(-4px);
+}
+
+.experience__header {
+  margin-bottom: 8px;
+}
+
+.experience__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.experience__company {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.experience__meta {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+}
+
+.experience__item--left .experience__meta {
+  justify-content: flex-end;
+}
+
+.experience__techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.experience__item--left .experience__techs {
+  justify-content: flex-end;
+}
+
+.experience__bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.experience__bullets li {
+  position: relative;
+  padding-left: 16px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.experience__item--left .experience__bullets li {
+  text-align: left;
+}
+
+.experience__bullets li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--accent-primary);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .experience__line {
+    left: 20px;
+  }
+
+  .experience__item {
+    width: 100%;
+    left: 0 !important;
+    padding: 0 0 40px 50px;
+    text-align: left !important;
+  }
+
+  .experience__dot {
+    left: 12px !important;
+    right: auto !important;
+  }
+
+  .experience__meta {
+    justify-content: flex-start !important;
+    flex-wrap: wrap;
+  }
+
+  .experience__techs {
+    justify-content: flex-start !important;
+  }
+}
